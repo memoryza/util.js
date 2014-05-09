@@ -340,5 +340,9 @@
                     })
                 }
             }
+        },
+        //获取文本框中选择文本
+        getSelectText: function(el) {
+            return typeof el.selectionStart == 'number' ? el.value.substring(el.selectionStart, el.selectionEnd) : document.selection.createRange().text;
         }
     }
